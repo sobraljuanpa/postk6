@@ -6,10 +6,10 @@ import { check } from 'k6';
 let counterErrors = new Counter('COUNTerrors');
 
 export let options = {
-    thresholds: {
-        http_req_duration: ['p(95)<2140'],
-        http_reqs: ["rate>134"]
-    },
+    //thresholds: {
+    //   http_req_duration: ['p(95)<2140'],
+    //    http_reqs: ["rate>134"]
+    //},
 };
 
 export default function() {
