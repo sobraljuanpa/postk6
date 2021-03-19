@@ -2,6 +2,7 @@ import { sleep, group } from "k6";
 import http from "k6/http";
 import { Counter } from 'k6/metrics';
 import { check } from 'k6';
+import jUnit from 'https://jslib.k6.io/k6-summary/0.0.1/index.js';
 
 let counterErrors = new Counter('COUNTerrors');
 
@@ -78,3 +79,8 @@ export default function() {
   sleep(1);
 
 };
+
+export function handleSummary(data){
+  console.log('Preparing end of test summary');
+  return { 'results.xml': jUnit(data) }
+}
