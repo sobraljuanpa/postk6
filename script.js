@@ -80,7 +80,7 @@ export default function() {
 
 };
 
-export function handleSummary(data){
+export function handleSummary(data) {
   console.log('Preparing end of test summary');
-  return { 'results.xml': jUnit(data) }
-}
+  return { 'results.xml': jUnit(data) };
+};
