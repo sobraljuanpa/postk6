@@ -9,7 +9,7 @@ node {
     }
     
     stage('Run performance tests') {
-        sh 'k6 run --vus 1600 --iterations 1600 script.js'
+        sh 'k6 run --vus 1200 --iterations 1200 script.js'
     }
     
     stage('Stop app') {
