@@ -15,8 +15,4 @@ node {
     stage('Stop app') {
         sh 'killall node'
     }
-    
-    stage('Report results') {
-        
-    }
 }
